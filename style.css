@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg, svg * {
+    transition: 0.5s;
+}
+
+svg:hover {
+   transform: scale(1.5);
+}
+
+svg:active #check-mark {
+   stroke: #55D21A;
+   stroke-dasharray: 500;
+   animation: draw 1s ease-in-out;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 500;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
